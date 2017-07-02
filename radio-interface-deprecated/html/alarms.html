@@ -1,0 +1,47 @@
+<div class="centered">
+    <item-browser />
+    <keyboard type="'text'"/>
+    <div class="edit-alarm-form" ng-show="editAlarm" layout="column">
+        <div class="alarmTitle">{{alarm.title}}</div>
+        <div layout="row" layout-align="center center">
+            <div class="alarmLabel" flex="30">Hour</div>
+            <div class="alarmLabel" flex="20" layout="row">
+                <md-button class="md-primary md-raised" r-click="editHour(alarm.date)">{{alarm.date | date: 'HH'}}</md-button>
+                <md-button class="md-primary md-raised" r-click="editMinutes(alarm.date)">{{alarm.date | date: 'mm'}}</md-button>
+            </div>
+            <div class="alarmLabel" flex="50"></div>
+        </div>
+        <div class="row"></div>
+        <div layout="row" layout-align="center center">
+            <div class="alarmLabel" flex="30">Repeat</div>
+            <div class="alarmLabel" flex="70">
+                <md-radio-group ng-model="alarm.repeat">
+                    <div layout="row" layout-align="center center">
+                        <md-radio-button flex="50" value="">None</md-radio-button>
+                        <md-radio-button flex="50" value="daily">Daily</md-radio-button>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-radio-button flex="50" value="weekdays">In week days</md-radio-button>
+                        <md-radio-button flex="50" value="weekends">In week end days</md-radio-button>
+                    </div>
+                </md-radio-group>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div layout="row" layout-align="center center">
+            <div class="alarmLabel" flex="30">Action</div>
+            <div class="alarmLabel" flex="70">
+                <md-radio-group ng-model="alarm.command" layout="row">
+                    <md-radio-button ng-click="selectSource()" value="openUrl">Start radio</md-radio-button>
+                    <md-radio-button value="clearAll">Stop radio</md-radio-button>
+                </md-radio-group>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div layout="row" layout-align="center center">
+            <div fex="50"><md-button class="md-primary md-raised" r-click="save()">Save</md-button></div>
+            <div flex="50"><md-button class="md-primary md-raised" r-click="cancel()">Cancel</md-button></div>
+        </div>
+    </div>
+    <ng-include src="'/app/html/select-browse-source.html'"/>
+</div>

@@ -1,0 +1,17 @@
+<div style="width: 480px">
+    <div class="row">
+        <nouislider #slider
+            (ngModelChange)="changed($event)"
+            [connect]="[true, false]"
+            [(ngModel)]="currentPosition"
+            [min]="0"
+            [max]="99"
+            [step]="1"
+            [disabled]="disableSpinner"></nouislider>
+    </div>
+    <div class="row">
+        <div style="text-align: center">
+            {{_currentPosition}}/{{_currentLength}}
+        </div>
+    </div>
+</div>

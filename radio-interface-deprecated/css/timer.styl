@@ -1,0 +1,25 @@
+@import 'root.css'
+
+.centered {
+    text-align: center;
+}
+
+generate_media(width, height, padding, font_size)
+    @media screen and (min-width: width) and (max-width: width + 80){
+        #timer-form {
+            height: height;
+        }
+
+        #countdown {
+            height: height;
+        }
+
+        .timerDisplay {
+            font-size: font_size;
+            color: orange;
+            font-weight: bold;
+        }
+    }
+
+generate_media(320px, 240px, 4px, 65px)
+generate_media(480px, 320px, 12px, 95px)

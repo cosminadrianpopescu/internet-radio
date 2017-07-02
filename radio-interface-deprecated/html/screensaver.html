@@ -1,0 +1,7 @@
+<div id="screensaver" ng-show="activate" r-click="click()">
+    <div style="color: {{playingColor}}" id="now_playing" class="inner">{{nowPlaying}}</div>
+    <div style="color: {{timeColor}}" id="time" class="inner">{{date | date: "HH:mm"}}</div>
+    <div style="color: {{dateColor}}" id="date" class="inner">{{date | date: "dd/MM/yyyy"}}</div>
+    <div id="weather" style="background-image: url({{weatherIcon}})">{{weatherText}}</div>
+    <div ng-show="isTimerSet" id="timer">{{timer.hours | radiotime}}:{{timer.minutes | radiotime}}:{{timer.seconds | radiotime}}</div>
+</div>

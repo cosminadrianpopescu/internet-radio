@@ -1,0 +1,43 @@
+<div id="content" class="centered">
+    <browser #dirBrowser type="dirBrowser"></browser>
+    <browser #playlist type="playlistBrowser"></browser>
+    <browser #history type="historyBrowser"></browser>
+    <keyboard prompt="Please choose a name" category="playlists" #keyboard></keyboard>
+    <screensaver></screensaver>
+    <div class="loader" [hidden]="!loading"></div>
+
+    <my-dialog #alertDlg title="Alert" size="sm" type="alert"></my-dialog>
+    <my-dialog #errDlg title="Error" size="sm" type="alert"></my-dialog>
+    <my-dialog #shutdownDlg title="Close" size="sm" [body]="shutdownSelector"></my-dialog>
+
+    <scroll direction="horizontal" [element]="buttonsDiv"></scroll>
+    <div #buttonsDiv class="buttons-wrapper">
+        <div class="main-buttons">
+            <div class="button" *ngFor="let button of buttons">
+                <span class="button{{button.selected}}" (click)="button.click()" id="{{button.id}}"><div>{{button.text}}</div></span>
+            </div>
+        </div>
+    </div>
+    <div class="info-wrapper">
+        <div class="info"><info></info></div>
+    </div>
+    <div class="options-wrapper">
+        <div class="controls">
+            <div [hidden]="!controlsVisible">
+                <div class="button-container" *ngFor="let button of controls" [hidden]="button.hidden">
+                    <span id="{{button.id}}" class="button3 control{{$index}}{{button.selected}}" (click)="button.click()"></span>
+                </div>
+            </div>
+            <div [hidden]="controlsVisible">
+                <player-spinner [visible]="!controlsVisible"></player-spinner>
+            </div>
+        </div>
+    </div>
+    <source-select #sourceSelector></source-select>
+    <template #shutdownSelector>
+        <div class="row">
+            <div class="col-xs-6"><button (click)="shutdown.bind(this)(false)" class="btn-primary btn big-button">Shut down</button></div>
+            <div class="col-xs-6"><button (click)="shutdown.bind(this)(true)" class="btn-primary btn big-button">Reboot</button></div>
+        </div>
+    </template>
+</div>

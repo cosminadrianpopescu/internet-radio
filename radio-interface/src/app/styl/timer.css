@@ -1,0 +1,18 @@
+@import 'root.css';
+fieldset {
+  padding-left: 176px;
+}
+.float {
+  float: left;
+}
+#timer-form {
+  height: 320px;
+}
+#countdown {
+  height: 320px;
+}
+.timerDisplay {
+  font-size: 95px;
+  color: #ffa500;
+  font-weight: bold;
+}

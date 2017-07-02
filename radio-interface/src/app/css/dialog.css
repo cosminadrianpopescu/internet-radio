@@ -1,0 +1,8 @@
+my-dialog button {
+    width: 80% !important;
+}
+
+.modal-body{
+    font-weight: normal !important;
+    color: black !important;
+}

@@ -1,0 +1,40 @@
+<div class="keyboard ng-class: 'keyboard-' + currentLevel" ng-show="activate">
+    <div class="back-home" r-click="backClick()"></div>
+    <div layout="column" layout-fill>
+        <div flex="10" layout="row">
+            <div flex="70">
+                <div>{{prompt}}</div>
+                <div><input id="keyboardInput" type="text" style="width: 100%" ng-model="input" /></div>
+            </div>
+            <div flex="30">
+                <md-button style="opacity: 0.4" class="md-primary md-raised" r-click="showHistoryBrowser()">History</md-button>
+            </div>
+        </div>
+        <div flex="90" layout="row" layout-wrap layout-align="space-around space-around">
+            <div ng-repeat="key in keys" flex="30" layout="column" layout-align="center center" r-click="keyClicked(key)" class="key" id="{{key.id}}">
+                <div class="key-number" flex="80">
+                    {{key.text1}}
+                </div>
+                <div flex="20">
+                    {{key.text2}}
+                </div>
+            </div>
+            <div ng-repeat="key in keys" id="dialog_{{key.id}}" ng_show="key.showDialog" class="key_selection" layout-align="center center" layout="row">
+                <div layout="row" layout-wrap>
+                    <div class="symbol">
+                        <md-button class="md-primary md-raised" r-click="chooseSymbol(key, key.text1)">{{key.text1}}</md-button>
+                    </div>
+                    <div class="symbol" ng-repeat="symbol in key.text2">
+                        <md-button class="md-primary md-raised" r-click="chooseSymbol(key, symbol)">{{symbol}}</md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-show="showHistory" layout-wrap layout-align="start start" class="history_selection" layout="row">
+        <md-button class="md-raised" r-click="showHistory = false">Cancel</md-button>
+        <div ng-repeat="input in keysHistory">
+            <md-button class="md-primary md-raised" r-click="selectHistory(input)">{{input}}</md-button>
+        </div>
+    </div>
+</div>

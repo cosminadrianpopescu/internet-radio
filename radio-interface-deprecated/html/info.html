@@ -1,0 +1,19 @@
+<div layout="row">
+    <div flex ng-if="isPlaying">
+        <div class="info-playing-now">{{info.playing.now}} ({{info.position.current}}/{{info.position.total}})</div>
+        <div class="info-playing">{{info.playing.next}}</div>
+    </div>
+    <div flex ng-if="!isPlaying" layout="row" layout-align="center center" class="iconInfoText">
+        <div ng-repeat="item in info.weather" flex="33" layout="row" layout-align="start center">
+            <div class="infoIconToday" style="background-image: url({{item.icon}})"></div>
+            <div layout="column">
+                <div>{{item.text}}</div>
+                <div>{{item.description}}</div>
+            </div>
+        </div>
+        <div class="infoTimer" ng-show="isTimerSet">
+            {{timer.hours | radiotime}}:{{timer.minutes | radiotime}}:{{timer.seconds | radiotime}}
+        </div>
+    </div>
+</div>
+

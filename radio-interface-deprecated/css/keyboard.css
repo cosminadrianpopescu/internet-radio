@@ -1,0 +1,103 @@
+.key {
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.keyboard-1 {
+  z-index: 81 !important;
+}
+.keyboard-2 {
+  z-index: 91 !important;
+}
+.keyboard-3 {
+  z-index: 101 !important;
+}
+.keyboard-4 {
+  z-index: 111 !important;
+}
+.keyboard-5 {
+  z-index: 121 !important;
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .key .key-number {
+    font-size: 16px;
+    height: 27.599999999999998px;
+  }
+  .key {
+    width: 98.66666666666667px;
+    margin: 4px;
+  }
+  .key_selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 240px;
+    background: #fff;
+    z-index: 81;
+    overflow: hidden;
+  }
+  .history_selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 240px;
+    background: #fff;
+    z-index: 82;
+    overflow: hidden;
+  }
+  .keyboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 240px;
+    background: #fff;
+    z-index: 80;
+    overflow: hidden;
+    color: #000;
+    font-weight: normal;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 560px) {
+  .key .key-number {
+    font-size: 24px;
+    height: 36px;
+  }
+  .key {
+    width: 148px;
+    margin: 6px;
+  }
+  .key_selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 320px;
+    background: #fff;
+    z-index: 81;
+    overflow: hidden;
+  }
+  .history_selection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 320px;
+    background: #fff;
+    z-index: 82;
+    overflow: hidden;
+  }
+  .keyboard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 480px;
+    height: 320px;
+    background: #fff;
+    z-index: 80;
+    overflow: hidden;
+    color: #000;
+    font-weight: normal;
+  }
+}

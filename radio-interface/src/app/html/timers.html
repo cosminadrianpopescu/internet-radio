@@ -1,0 +1,26 @@
+<div>
+    <browser #browser type="timerBrowser"></browser>
+    <keyboard category="timers" #keyboard></keyboard>
+    <div class="back-home" (click)="home()"></div>
+    <div id="timer-form" [hidden]="!editTimer">
+        <div class="row" style="text-align: center">
+            <ngb-timepicker #timepicker [(ngModel)]="model" [seconds]="true"></ngb-timepicker>
+        </div>
+        <div class="row" style="text-align: center">
+            <button class="btn btn-primary" type="button" (click)="start()">Start</button>
+        </div>
+    </div>
+
+    <div id="countdown" [hidden]="editTimer" style="padding-top: 80px">
+        <div class="row timerDisplay">
+            <div class="col-xs-12">{{model.hour | radiotime}}:{{model.minute | radiotime}}:{{model.second | radiotime}}</div>
+        </div>
+        <div class="row" style="text-align: center">
+            <div class="button-group">
+                <button (click)="stop()" class="btn btn-primary">Stop</button>
+                <button (click)="pause()" *ngIf="!isPaused" class="btn btn-warning">Pause</button>
+                <button (click)="resume()" *ngIf="isPaused" class="btn btn-success">Resume</button>
+            </div>
+        </div>
+    </div>
+</div>

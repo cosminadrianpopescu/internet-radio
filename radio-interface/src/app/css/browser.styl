@@ -1,0 +1,41 @@
+@import "root.css"
+
+.list-item{
+    border-bottom: 1px solid orange;
+}
+
+.list-item.dir {
+    color: orange;
+    font-weight: bold;
+}
+
+.browser {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+generate_media(width, height, padding)
+    // @media screen and (min-width: width) and (max-width: width + 80){
+    .list-wrapper{
+        width: width;
+        height: height;
+        overflow: scroll;
+    }
+
+    .list-items {
+        width: width;
+    }
+
+    .list-item {
+        padding-top: padding;
+        padding-bottom: padding;
+        padding-left: padding;
+    }
+
+    // }
+
+//generate_media(320px, 240px, 8px)
+generate_media(480px, 320px, 13px)

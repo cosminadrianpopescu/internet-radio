@@ -1,0 +1,64 @@
+#screensaver {
+  color: #ffa500;
+}
+#screensaver #now_playing {
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+#screensaver .inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#screensaver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 320px;
+  background: #000;
+  z-index: 100;
+  overflow: hidden;
+}
+#screensaver #time {
+  position: absolute;
+  left: 0px;
+  top: 52px;
+  font-family: dejavu sans;
+  font-weight: bold;
+  font-size: 144px;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+#screensaver #date {
+  font-weight: bold;
+  position: absolute;
+  top: 202px;
+  right: 13px;
+  font-size: 36px;
+  text-align: right;
+}
+#screensaver #weather {
+  position: absolute;
+  left: 13px;
+  bottom: 8px;
+  width: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 75px;
+  color: #ff0;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#screensaver #timer {
+  position: absolute;
+  font-weight: bold;
+  right: 13px;
+  bottom: 8px;
+  font-size: 36px;
+  color: #ff0;
+}

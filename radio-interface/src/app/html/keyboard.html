@@ -1,0 +1,35 @@
+<div class="keyboard" [hidden]="!visible">
+    <div class="back-home" (click)="hide()"></div>
+    <browser #browser type="keyboardHistory"></browser>
+    <div>
+        <div class="form-group row">
+            <div class="col-xs-8">
+                <label for="inputId">{{prompt}}</label>
+                <input id="inputId" class="form-control" #input type="text" style="width: 100%" value="" />
+            </div>
+            <div class="col-xs-4" [hidden]="!category">
+                <button class="btn btn-primary big-button" (click)="showHistoryBrowser()">History</button>
+            </div>
+        </div>
+        <div>
+            <div *ngFor="let key of keys" class="col-xs-4" (click)="keyClicked(key)" class="key col-xs-4" id="{{key.id}}">
+                <div class="key-number">
+                    {{key.text1}}
+                </div>
+                <div>
+                    {{key.text2}}
+                </div>
+            </div>
+            <div *ngFor="let key of keys" id="dialog_{{key.id}}" [hidden]="!key.showDialog" class="key_selection">
+                <div class="row">
+                    <div class="symbol col-xs-2">
+                        <button class="btn btn-primary big-button" (click)="chooseSymbol(key, key.text1)">{{key.text1}}</button>
+                    </div>
+                    <div class="symbol col-xs-2" *ngFor="let symbol of toArray(key.text2)">
+                        <button class="btn btn-primary big-button" (click)="chooseSymbol(key, symbol)">{{symbol == ' ' ? '&nbsp;' : symbol}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

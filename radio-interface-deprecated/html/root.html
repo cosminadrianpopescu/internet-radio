@@ -1,0 +1,27 @@
+<div id="content" class="centered">
+    <item-browser />
+    <keyboard activate="false" type="'text'"/>
+    <screensaver activate="false"/>
+    <ng-include src="'/app/html/loading.html'"/>
+    <scroll direction="'horizontal'" selector="'.buttons-wrapper'"/>
+    <div class="buttons-wrapper">
+        <div class="main-buttons">
+            <div class="button" ng-repeat="button in buttons">
+                <span class="button{{button.selected}}" r-click="button.click()" id="{{button.id}}"><div>{{button.text}}</div></span>
+            </div>
+        </div>
+    </div>
+    <div class="info-wrapper" swipe="Y">
+        <div class="info"><ng-include src="'/app/html/info.html'"/></div>
+    </div>
+    <div class="options-wrapper" swipe="X">
+        <div class="controls">
+            <div class="button-container" ng-repeat="button in controls">
+                <span id="{{button.id}}" class="button3 control{{$index}}{{button.selected}}" r-click="button.click()"></span>
+            </div>
+        </div>
+    </div>
+    <ng-include src="'/app/html/select-browse-source.html'"/>
+    <ng-include src="'/app/html/select-shutdown.html'"/>
+    <ng-include src="'/app/html/select-backend.html'"/>
+</div>

@@ -1,0 +1,23 @@
+<div>
+    <my-dialog title="Make a selection" #sourceDialog type="dialog" [body]="openDlgTpl"></my-dialog>
+    <browser #filesBrowser type="files"></browser>
+    <browser #youtubeBrowser with-keyboard="true" type="youtube"></browser>
+    <browser #radioBrowser with-keyboard="true" type="radioBrowser"></browser>
+    <browser #favouritesBrowser can-create-folder="true" type="favouritesBrowser"></browser>
+    <template #openDlgTpl>
+        <form>
+            <div class="row">
+                <div class="col-xs-6">
+                    <button class="btn btn-primary big-button" (click)="open.bind(this)('files', filesDefaultPath)">Local files</button>
+                </div>
+                <div class="col-xs-6"><button class="btn btn-primary big-button" (click)="open.bind(this)('radioBrowser')">Radios</button></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6"><button class="btn btn-primary big-button" (click)="open.bind(this)('youtube')">Youtube</button></div>
+                <div class="col-xs-6">
+                    <button class="btn btn-primary big-button" (click)="open.bind(this)('favouritesBrowser')">Favourites</button>
+                </div>
+            </div>
+        </form>
+    </template>
+</div>

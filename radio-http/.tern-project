@@ -1,0 +1,6 @@
+{
+    "loadEagerly": ["./base-parser.js", "./vtunner.js"],
+    "plugins": {
+        "node": {}
+    }
+}

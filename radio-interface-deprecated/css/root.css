@@ -1,0 +1,315 @@
+@import "screensaver.css";
+@import "keyboard.css";
+@import "scroll.css";
+@import "controls.css";
+@import "playlist.css";
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.md-button {
+  width: 90%;
+}
+body {
+  background-color: #eee;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+div.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.test {
+  width: 600px;
+  height: 800px;
+}
+.buttons {
+  display: block;
+  position: relative;
+}
+#content {
+  padding-top: 8px;
+  color: #ffa500;
+  font-weight: bold;
+}
+span.button,
+span.button2,
+span.button3,
+.back-home {
+  border: none;
+  display: inline-block;
+  background: none;
+  background-repeat: no-repeat;
+  background-image: url("../images/buttons.png");
+  text-align: center;
+}
+.info {
+  height: auto;
+}
+.info-wrapper {
+  overflow-y: scroll;
+  font-weight: normal;
+  color: #000;
+}
+.info-playing-now {
+  font-weight: bold;
+}
+.buttons-wrapper {
+  overflow-x: scroll;
+}
+.button-container {
+  float: left;
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  #content {
+    width: 320px;
+    height: 240px;
+  }
+  .infoTimer {
+    font-weight: bold;
+    font-size: 26px;
+  }
+  .back-home {
+    width: 64px;
+    height: 64px;
+    background-position: -560px -330px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+  .button2 {
+    width: 64px;
+    height: 64px;
+    background-position: 0px -330px !important;
+    font-size: 39px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .button2 div {
+    height: 64px;
+    width: 64px;
+    line-height: 65px;
+  }
+  span.button div {
+    position: relative;
+    top: 96px;
+    font-size: 13px;
+  }
+  span.button {
+    width: 96px;
+    height: 96px;
+  }
+  .info-wrapper {
+    width: 320px;
+    height: 40px;
+  }
+  .info-playing {
+    height: 13.333333333333334px;
+    overflow: hidden;
+    font-size: 10px;
+  }
+  .options-wrapper {
+    height: 64px;
+    width: 320px;
+    overflow: scroll;
+  }
+  div.button {
+    padding-left: 5px;
+    padding-right: 5px;
+    float: left;
+  }
+  .buttons-wrapper {
+    width: 320px;
+    height: 126px;
+  }
+  .loading-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 320px;
+  }
+  .main-buttons {
+    width: 1070px;
+    height: 126px;
+  }
+  #but-favourites {
+    background-position: 0px -130px;
+  }
+  #but-control-shuffle {
+    background-position: -100px -130px;
+  }
+  #but-playlist {
+    background-position: -200px -130px;
+  }
+  #but-open {
+    background-position: -300px -130px;
+  }
+  #but-stop-all {
+    background-position: -400px -130px;
+  }
+  #but-alarms {
+    background-position: -500px -130px;
+  }
+  #but-timer {
+    background-position: -600px -130px;
+  }
+  #but-history {
+    background-position: -700px -130px;
+  }
+  #but-close {
+    background-position: -800px -130px;
+  }
+  #but-backend {
+    background-position: -900px -130px;
+  }
+  .button.selected {
+    background-position-y: -530px !important;
+  }
+  .infoIconToday {
+    float: left;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+  }
+  .iconInfoText {
+    font-size: 10px;
+  }
+  body {
+    font: 8pt Helvetica, Arial, sans-serif;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 560px) {
+  #content {
+    width: 480px;
+    height: 320px;
+  }
+  .infoTimer {
+    font-weight: bold;
+    font-size: 32px;
+  }
+  .back-home {
+    width: 96px;
+    height: 96px;
+    background-position: -800px -230px;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+  .button2 {
+    width: 96px;
+    height: 96px;
+    background-position: 0px -230px !important;
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .button2 div {
+    height: 96px;
+    width: 96px;
+    line-height: 90px;
+  }
+  span.button div {
+    position: relative;
+    top: 128px;
+    font-size: 16px;
+  }
+  span.button {
+    width: 128px;
+    height: 128px;
+  }
+  .info-wrapper {
+    width: 480px;
+    height: 52px;
+  }
+  .info-playing {
+    height: 17.333333333333332px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .options-wrapper {
+    height: 96px;
+    width: 480px;
+    overflow: scroll;
+  }
+  div.button {
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+  }
+  .buttons-wrapper {
+    width: 480px;
+    height: 164px;
+  }
+  .loading-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 480px;
+  }
+  .main-buttons {
+    width: 1456px;
+    height: 164px;
+  }
+  #but-favourites {
+    background-position: 0px 0px;
+  }
+  #but-control-shuffle {
+    background-position: -130px 0px;
+  }
+  #but-playlist {
+    background-position: -260px 0px;
+  }
+  #but-open {
+    background-position: -390px 0px;
+  }
+  #but-stop-all {
+    background-position: -520px 0px;
+  }
+  #but-alarms {
+    background-position: -650px 0px;
+  }
+  #but-timer {
+    background-position: -780px 0px;
+  }
+  #but-history {
+    background-position: -910px 0px;
+  }
+  #but-close {
+    background-position: -1040px 0px;
+  }
+  #but-backend {
+    background-position: -1170px 0px;
+  }
+  .button.selected {
+    background-position-y: -400px !important;
+  }
+  .infoIconToday {
+    float: left;
+    width: 52px;
+    height: 52px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 52px 52px;
+  }
+  .iconInfoText {
+    font-size: 13px;
+  }
+  body {
+    font: 11pt Helvetica, Arial, sans-serif;
+  }
+}

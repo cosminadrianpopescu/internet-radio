@@ -1,0 +1,7 @@
+<div id="screensaver" [hidden]="!visible" (click)="click($event, 'click')">
+    <div #playingDiv id="now_playing" class="inner">{{nowPlaying}}</div>
+    <div #timeDiv id="time" class="inner">{{date | mydate: "time"}}</div>
+    <div #dateDiv id="date" class="inner">{{date | mydate: "date"}}</div>
+    <div id="weather" #weatherDiv>{{weatherText}}</div>
+    <div [hidden]="!isTimerSet" id="timer">{{timer.hour | radiotime}}:{{timer.minute | radiotime}}:{{timer.second | radiotime}}</div>
+</div>

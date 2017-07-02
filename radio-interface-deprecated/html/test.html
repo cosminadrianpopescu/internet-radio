@@ -1,0 +1,29 @@
+<div>
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-if="showProgress">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+    <div layout="column" layout-wrap style="height: 320px">
+        <div ng-repeat="(key, test) in tests" layout-align="center" layout-wrap>
+            <a r-click="test()">{{key}}</a>
+        </div>
+    </div>
+
+    <keyboard activate="false" type="'text'"/>
+
+    <script id="dialogTemplate" type="text/template">
+        <md-dialog flex="80" layout-padding>
+            <md-dialog-content>
+                <md-content>
+                    <div flex layout="row">
+                        <div flex><md-button class="md-primary md-raised" flex r-click="answer('local')">Local Files</md-button></div>
+                        <div flex><md-button class="md-primary md-raised" r-click="answer('radios')">Radios</md-button></div>
+                    </div>
+                    <div layout="row">
+                        <div flex><md-button class="md-primary md-raised" r-click="answer('youtube')">Youtube Playlists</md-button></div>
+                        <div flex><md-button class="md-primary" r-click="answer('cancel')">Cancel</md-button></div>
+                    </div>
+                </md-content>
+            </md-dialog-content>
+        </md-dialog>
+    </script>
+</div>

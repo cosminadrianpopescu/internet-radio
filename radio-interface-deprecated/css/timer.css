@@ -1,0 +1,30 @@
+@import 'root.css';
+.centered {
+  text-align: center;
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  #timer-form {
+    height: 240px;
+  }
+  #countdown {
+    height: 240px;
+  }
+  .timerDisplay {
+    font-size: 65px;
+    color: #ffa500;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 560px) {
+  #timer-form {
+    height: 320px;
+  }
+  #countdown {
+    height: 320px;
+  }
+  .timerDisplay {
+    font-size: 95px;
+    color: #ffa500;
+    font-weight: bold;
+  }
+}

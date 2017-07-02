@@ -1,0 +1,79 @@
+#screensaver{
+    color: orange;
+}
+
+#screensaver #now_playing{
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+#screensaver .inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+generate_media(width, height, padding, timeSize, dateSize, weatherIconSize)
+    @media screen and (min-width: width) and (max-width: width + 80){
+        #screensaver{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: width;
+            height: height;
+            background: black;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        #screensaver #time{
+            position: absolute;
+            left: 0px;
+            top: (height / 2) - (timeSize / 2) - padding * 2 - 10;
+            font-family: dejavu sans;
+            font-weight: bold;
+            font-size: timeSize;
+            text-align: center;
+            width: 100%;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        #screensaver #date {
+            font-weight: bold;
+            position: absolute;
+            top: height - (timeSize / 2) - dateSize - 10;
+            right: padding;
+            font-size: dateSize;
+            text-align: right;
+        }
+
+        #screensaver #weather{
+            position: absolute;
+            left: padding;
+            bottom: 8px;
+            width: weatherIconSize;
+            font-size: dateSize - 12;
+            font-weight: bold;
+            text-align: center;
+            padding-top: weatherIconSize * 0.75;
+            color: yellow;
+            background-size: weatherIconSize weatherIconSize;
+            background-repeat: no-repeat;
+        }
+
+        #screensaver #timer {
+            position: absolute;
+            font-weight: bold;
+            right: padding;
+            bottom: 8px;
+            font-size: dateSize;
+            color: yellow;
+        }
+
+    }
+
+generate_media(320px, 240px, 8px, 96px, 24px, 80px)
+generate_media(480px, 320px, 13px, 144px, 36px, 100px)
+

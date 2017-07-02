@@ -1,0 +1,41 @@
+.controls {
+  height: 96px;
+  width: 672px;
+}
+.button-container {
+  width: 96px;
+}
+.button3 {
+  width: 96px;
+  height: 96px;
+}
+.button3 div {
+  height: 96px;
+  width: 96px;
+}
+#but-seek-back {
+  background-position: -100px -230px !important;
+}
+#but-play {
+  background-position: -200px -230px !important;
+}
+#but-pause {
+  background-position: -300px -230px !important;
+}
+#but-stop {
+  background-position: -400px -230px !important;
+}
+#but-seek-forward {
+  background-position: -500px -230px !important;
+}
+#but-loop {
+  background-position-x: -600px;
+  background-position-y: -230px;
+}
+#but-shuffle {
+  background-position-x: -700px;
+  background-position-y: -230px;
+}
+.button3.selected {
+  background-position-y: -630px !important;
+}

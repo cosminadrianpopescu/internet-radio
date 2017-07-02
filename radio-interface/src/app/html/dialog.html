@@ -1,0 +1,23 @@
+<div class="modal fade" bsModal #modalDialog="bs-modal" [config]="config"
+        role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-{{size}}">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">{{title}}</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalDialog.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div *ngIf="isBodyString()" class="modal-body" [innerHtml]="body"></div>
+            <div *ngIf="!isBodyString()" class="modal-body">
+                <template [ngTemplateOutlet]="body"></template>
+            </div>
+            <div class="modal-footer" *ngIf="type != 'dialog'">
+                <div class="form-group">
+                    <button class="btn btn-primary" type="button" (click)="click(true)">Ok</button>
+                    <button *ngIf="type != 'alert'" class="btn btn-danger" type="button" (click)="click(false)">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

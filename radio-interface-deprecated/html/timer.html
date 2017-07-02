@@ -1,0 +1,34 @@
+<div>
+    <div class="back-home" r-click="backClick()"></div>
+    <keyboard type="'numerical'"/>
+    <div id="timer-form" layout="column" layout-align="center center" ng-show="!isTimerSet && !isAlarmOn">
+        <div flex layout="row" layout-align="center center">
+            <div flex="33">
+                <div class="centered">Hours</div>
+                <md-button class="md-primary md-raised" r-click="editField('hours')">{{timer.hours}}</md-button>
+            </div>
+            <div flex="33">
+                <div class="centered">Minutes</div>
+                <md-button class="md-primary md-raised" r-click="editField('minutes')">{{timer.minutes}}</md-button>
+            </div>
+            <div flex="33">
+                <div class="centered">Seconds</div>
+                <md-button class="md-primary md-raised" r-click="editField('seconds')">{{timer.seconds}}</md-button>
+            </div>
+        </div>
+        <div layout="row" align="center center">
+            <md-button class="md-primary md-raised" r-click="start()">Start</md-button>
+        </div>
+    </div>
+
+    <div id="countdown" layout="column" layout-align="center center" ng-show="isTimerSet || isAlarmOn">
+        <div class="timerDisplay">
+            {{timer.hours | radiotime}}:{{timer.minutes | radiotime}}:{{timer.seconds | radiotime}}
+        </div>
+        <div layout="row" layout-align="center center">
+            <md-button class="md-warn md-raised" r-click="stop()">Stop</md-button>
+            <md-button ng-show="!isTimerPaused && !isAlarmOn" class="md-primary md-raised" r-click="pause()">Pause</md-button>
+            <md-button ng-show="isTimerPaused && !isAlarmOn" class="md-primary md-raised" r-click="resume()">Resume</md-button>
+        </div>
+    </div>
+</div>

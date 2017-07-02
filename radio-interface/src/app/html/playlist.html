@@ -1,0 +1,18 @@
+<div class="browser ng-class: 'browser-' + currentLevel" ng-show="activate">
+    <div id="browserLoaded" ng-show="false"></div>
+    <ng-include src="'/app/html/loading.html'"/>
+    <div class="back-home" r-click="backClick()"></div>
+    <scroll direction="'vertical'" selector="'.list-wrapper'"/>
+    <div class="list-wrapper" ng-show="!showProgress">
+        <div class="list-items">
+            <div class="list-item{{item.playing ? ' selected' : ''}}" ng-repeat="item in items" r-click="selectItem(item, null)">
+                <span class="list-{{item.type}}"></span>
+                <span class="item-name">{{item.name}}</span>
+                <span ng-repeat="option in item.options" class="browserItemOption {{option}}" r-click="selectItem(item, option)"></span>
+            </div>
+        </div>
+        <div ng-if="items.length == 0">
+            {{noItemsText}}
+        </div>
+    </div>
+</div>

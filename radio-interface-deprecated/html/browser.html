@@ -1,0 +1,15 @@
+<div class="centered">
+    <ng-include src="'/app/html/loading.html'"/>
+    <div class="back-home" r-click="backClick()"></div>
+    <div class="list-wrapper" swipe="Y">
+        <div class="list-items">
+            <div class="list-item" ng-repeat="item in items">
+                {{item.name}}
+            </div>
+        </div>
+        <div ng-if="items.length == 0">
+            {{noItemsText}}
+        </div>
+    </div>
+</div>
+

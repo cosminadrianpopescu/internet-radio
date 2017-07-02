@@ -1,0 +1,29 @@
+<div class="browser centered" [hidden]="!visible">
+    <scroll #scroller direction="vertical" [element]="mainDiv"></scroll>
+    <div class="back-home" (click)="backClicked()"></div>
+    <div class="loader" [hidden]="!loading"></div>
+    <div *ngIf="withKeyboard == 'true' || canCreateFolder == 'true'" >
+        <keyboard #searchKeyboard prompt="Please enter the query" [category]="type"></keyboard>
+    </div>
+    <div *ngIf="withKeyboard == 'false' && canCreateFolder == 'false'"><div #searchKeyboard></div></div>
+    <div class="list-wrapper" #mainDiv>
+        <table class="table table-striped">
+            <tr class="list-item{{item.playing ? ' selected' : ''}} {{item.type}}"
+                *ngFor="let item of items"
+                (click)="selectItem($event, item, null)">
+                <td style="vertical-align: middle">
+                    <!--<span class="list-{{item.type}}"></span>-->
+                    <span class="item-name">{{item.name}}</span>
+                </td>
+                <td *ngIf="hasOptions">
+                    <span *ngFor="let option of item.options"
+                        class="browserItemOption {{option}}"
+                        (click)="selectItem($event, item, option)"></span>
+                </td>
+            </tr>
+        </table>
+        <div *ngIf="items.length == 0">
+            {{noItemsText}}
+        </div>
+    </div>
+</div>

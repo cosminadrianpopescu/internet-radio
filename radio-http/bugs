@@ -1,0 +1,3 @@
+* settings save consistently
+* play beatles, wait for cache, then play michelle from cache, then next => blocks - done
+* position event is not sent anymore - done

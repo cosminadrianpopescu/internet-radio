@@ -1,0 +1,32 @@
+@import 'root.css'
+
+generate_media(width, height, padding, font_size)
+    @media screen and (min-width: width) and (max-width: width + 80){
+        .alarmTitle {
+            color: #18e0d9;
+            text-align: center;
+            font-size: font_size;
+            padding-top: padding;
+            font-weight: bold;
+        }
+
+        .row {
+            border-bottom: 1px solid orange;
+            margin-top: padding;
+            margin-bottom: padding;
+        }
+
+        md-radio-button {
+            margin-top: 0px !important;
+        }
+
+        .edit-alarm-form{
+            width: width;
+            height: height;
+            overflow: scroll;
+        }
+
+    }
+
+generate_media(320px, 240px, 4px, 18px)
+generate_media(480px, 320px, 12px, 24px)

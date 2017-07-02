@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div [hidden]="!isPlaying">
+            <div class="info-playing-now">{{info.playing_now}} ({{info.position_total}})</div>
+            <div class="info-playing">{{info.playing_next}}</div>
+        </div>
+        <div [hidden]="isPlaying" class="iconInfoText">
+            <div *ngFor="let item of info.weather" class="col-xs-4">
+                <div class="infoIconToday"></div>
+                <div layout="column">
+                    <div>{{item.text}}</div>
+                    <div>{{item.description}}</div>
+                </div>
+            </div>
+            <div class="infoTimer" ng-show="isTimerSet" (click)="timerPause()">
+                {{timer.hour | radiotime}}:{{timer.minute | radiotime}}:{{timer.second | radiotime}}
+            </div>
+        </div>
+    </div>
+</div>
+

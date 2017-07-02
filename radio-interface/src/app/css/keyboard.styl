@@ -1,0 +1,79 @@
+@import 'root.css'
+
+.key{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.keyboard-1{
+    z-index: 81 !important;
+}
+
+.keyboard-2{
+    z-index: 91 !important;
+}
+
+.keyboard-3{
+    z-index: 101 !important;
+}
+
+.keyboard-4{
+    z-index: 111 !important;
+}
+
+.keyboard-5{
+    z-index: 121 !important;
+}
+
+generate_media(width, height, padding, right_margin)
+    // @media screen and (min-width: width) and (max-width: width + 80){
+    .key .key-number {
+        font-size: padding * 4;
+        height: ((height - height * 0.1) / 4 - padding * 2) * 0.60;
+    }
+
+    .key {
+        width: (width / 3 - padding * 2);
+        margin: padding;
+        height: ;
+    }
+
+    .key_selection {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: width;
+        height: height;
+        background: white;
+        z-index: 81;
+        overflow: hidden;
+        padding-top: 150px;
+    }
+
+    .history_selection {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: width;
+        height: height;
+        background: white;
+        z-index: 82;
+        overflow: hidden;
+    }
+
+    .keyboard{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: width;
+        height: height;
+        background: white;
+        z-index: 80;
+        overflow: hidden;
+        color: black;
+        font-weight: normal;
+    }
+    // }
+
+// generate_media(320px, 240px, 4px, 48px)
+generate_media(480px, 320px, 6px, 64px)

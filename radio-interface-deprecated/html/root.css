@@ -1,0 +1,270 @@
+root { 
+    display: block;
+}
+::-webkit-scrollbar{
+    display: none
+}
+#content{
+
+}
+body{
+	font: 11pt Helvetica, Arial, sans-serif;
+	background-color:#EEE;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+#meta {
+	position:relative;
+	width:100%;
+}
+#mediaTitle{
+	text-align:center;
+	width:100%;
+	margin-top:5px;
+}
+#currentTime{
+	float: left;
+	text-align: left;
+}
+#totalTime{
+	float: right;
+	text-align: right;
+}
+#play_controls, #controls{
+	margin-top:18px;
+	width:95%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#buttonszone li{
+	float: left;
+}
+
+.top-corner {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 11;
+}
+
+.top-corner.next {
+    top: 56px;
+}
+
+.top-corner-down {
+    position: fixed;
+    top: 15px;
+    left: 0px;
+    z-index: 11;
+}
+
+.buttons{
+	margin:0 auto; 
+	position: relative; 
+	width:300px;
+}
+.button48{
+	width: 48px;
+	height: 48px;
+	margin: 0px 0px 0px 4px;
+	background: none;
+	border: none;
+	display: inline-block;
+	cursor: pointer;
+	background-image: url("../images/buttons.png");
+	background-repeat: no-repeat;
+}
+
+.button{
+	cursor: pointer;
+	display: inline-block;
+}
+#buttonOpen{
+	background-position: 0px 0px;
+}
+#buttonPlaylist{
+	background-position: -48px 0px;
+}
+#buttonFwrd{
+	background-position: -96px 0px;
+}
+#buttonPrev{
+	background-position: -144px 0px;
+}
+#buttonFull{
+	background-position: -192px 0px;
+}
+#buttonScreenSaver{
+	background-position: -192px 0px;
+}
+#buttonShuffle{
+	background-position: -240px 0px;
+}
+#buttonNext{
+	background-position: -288px 0px;
+}
+.playing {
+	background-position: -336px 0px;
+}
+.paused {
+	background-position: -384px 0px;
+}
+#buttonSout{
+	background-position: -432px 0px;
+}
+#buttonLoop{
+	background-position: -480px 0px;
+}
+#buttonBack{
+	background-position: -528px 0px;
+}
+#buttonRewd{
+	background-position: -528px 0px;
+}
+#buttonStop{
+	background-position: -576px 0px;
+}
+#buttonYoutube{
+	background-position: -624px 0px;
+}
+#buttonFav1{
+    background-position: -672px 0px;
+}
+#buttonFav2{
+    background-position: -720px 0px;
+}
+#buttonFav3{
+    background-position: -768px 0px;
+}
+#buttonFav4{
+    background-position: -816px 0px;
+}
+#buttonFav5{
+    background-position: -864px 0px;
+}
+#buttonLoop.ui-state-active, #buttonShuffle.ui-state-active{
+    border: 1px solid red;
+}
+#window_browse ol{
+	list-style-type: none;
+}
+#window_browse ol li{
+	list-style-type: none;
+	float: left;
+	padding: 5px;
+}
+.system_icon{
+	width:80px;
+	text-align:center;
+	vertical-align:top;
+	display: inline-block;
+	cursor: pointer;
+	padding: 2px;
+	border: 1px solid #823D0A;
+	margin: 2px;
+	height: 92px;
+	background-color: #E1E1E1;
+	overflow: hidden;
+}
+.footer{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 11px;
+}
+
+div.centered{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hidden{
+	visibility: hidden;
+	display: none;
+}
+
+#screensaver{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 240px;
+    background: black;
+    z-index: 10;
+    display: none;
+    overflow: hidden;
+}
+
+#screensaver .inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#screensaver #time{
+    font-family: dejavu sans;
+    font-weight: bold;
+    font-size: 96px;
+    text-align: center;
+    width: 100%;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+#screensaver #now_playing{
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+#screensaver #date {
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    text-align: right;
+}
+
+.playlist_mobile_row{
+    height: 35px;
+    padding-top: 4px;
+    padding-left: 4px;
+    border-top: 1px solid yellow;
+    width: 100%;
+}
+
+.playlist_mobile_row_even{
+    background-color: #ffffff;
+}
+
+.playlist_mobile_row_odd{
+    background-color: #eeeeee;
+}
+
+#screensaver #weather{
+    position: absolute;
+    left: 10px;
+    top: 145px;
+    width: 80px;
+    height: 80px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 60px;
+    color: yellow;
+    background-size: 80px 80px;
+}
+
+#libraryGrid .playing {
+    font-weight: bold;
+}
+
+#swipe_area {
+    position: fixed;
+    top: 0px;
+    left: 260px;
+    width: 60px;
+    height: 240px;
+    z-index: 1;
+}
+

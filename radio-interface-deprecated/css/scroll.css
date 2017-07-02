@@ -1,0 +1,34 @@
+.scroll-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.scroll-icon-down {
+  background-image: url("../images/scroll-down.png");
+}
+.scroll-icon-up {
+  background-image: url("../images/scroll-up.png");
+}
+.scroll-icon-left {
+  background-image: url("../images/scroll-left.png");
+}
+.scroll-icon-right {
+  background-image: url("../images/scroll-right.png");
+}
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .scroll-icon {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    z-index: 2;
+    opacity: 0.4;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 560px) {
+  .scroll-icon {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    z-index: 2;
+    opacity: 0.4;
+  }
+}

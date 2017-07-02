@@ -1,0 +1,23 @@
+.scroll-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.scroll-icon-down {
+  background-image: url("../images/scroll-down.png");
+}
+.scroll-icon-up {
+  background-image: url("../images/scroll-up.png");
+}
+.scroll-icon-left {
+  background-image: url("../images/scroll-left.png");
+}
+.scroll-icon-right {
+  background-image: url("../images/scroll-right.png");
+}
+.scroll-icon {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+  opacity: 0.4;
+}

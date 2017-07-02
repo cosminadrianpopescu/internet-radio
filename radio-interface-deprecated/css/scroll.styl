@@ -1,0 +1,35 @@
+.scroll-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.scroll-icon-down {
+    background-image: url(../images/scroll-down.png);
+}
+
+.scroll-icon-up {
+    background-image: url(../images/scroll-up.png);
+}
+
+.scroll-icon-left {
+    background-image: url(../images/scroll-left.png);
+}
+
+.scroll-icon-right {
+    background-image: url(../images/scroll-right.png);
+}
+
+generate_media(width, height, but)
+    @media screen and (min-width: width) and (max-width: width + 80){
+        .scroll-icon {
+            position: fixed;
+            width: but;
+            height: but;
+            z-index: 2;
+            opacity: 0.4;
+        }
+    }
+
+generate_media(320px, 240px, 64px)
+generate_media(480px, 320px, 64px)
+

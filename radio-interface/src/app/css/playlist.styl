@@ -1,0 +1,119 @@
+@import "root.css"
+
+.list-item.selected{
+    font-weight: bold;
+}
+
+.list-item{
+    border-bottom: 1px solid orange;
+}
+
+.list-dir, .list-file{
+    display: inline-flex;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+}
+
+.list-dir+span{
+    font-weight: bold;
+    color: orange;
+}
+
+.browser-1{
+    z-index: 80 !important;
+}
+
+.browser-2{
+    z-index: 90 !important;
+}
+
+.browser-3{
+    z-index: 100 !important;
+}
+
+.browser-4{
+    z-index: 110 !important;
+}
+
+.browser-5{
+    z-index: 120 !important;
+}
+
+generate_media(width, height, padding, options_width, options_height, item_name_width)
+    // @media screen and (min-width: width) and (max-width: width + 80){
+    .list-wrapper{
+        width: width;
+        height: height;
+        overflow: scroll;
+    }
+
+    .list-item {
+        padding-top: padding;
+        padding-bottom: padding;
+        padding-left: padding;
+    }
+
+    .list-item-icon {
+        float: left;
+    }
+
+    .browserItemOption {
+        width: options_width;
+        height: options_height;
+        display: inherit;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+
+    .item-name {
+        max-width:  item_name_width;
+        min-height: options_height - padding * 2;
+        overflow: hidden;
+        display: block;
+        float: left;
+    }
+
+    .addToFavourites {
+        background-image: url(../images/addToFavourites.png);
+    }
+
+    .delete {
+        background-image: url(../images/delete.png);
+    }
+
+    .enque {
+        background-image: url(../images/enque.png);
+    }
+
+    .enable {
+        background-image: url(../images/enable.png);
+    }
+
+    .select {
+        background-image: url(../images/select.png);
+    }
+
+    .disable {
+        background-image: url(../images/disable.png);
+    }
+
+    .browser{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: width;
+        height: height;
+        background: white;
+        z-index: 79;
+        overflow: hidden;
+        color: black;
+        font-weight: normal;
+    }
+    .keyboardBrowser {
+        z-index: 81 !important;
+    }
+    // }
+
+// generate_media(320px, 240px, 8px, 48px, 36px, 210px)
+generate_media(480px, 320px, 13px, 48px, 46px, 360px)

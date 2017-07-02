@@ -1,0 +1,24 @@
+#!/bin/bash
+
+xset -dpms
+xset s off
+
+npm=""
+port="8080"
+
+while [ "$npm" != "x" ]
+do
+	sleep 1
+	nc -z -v 127.0.0.1 $port 2>/tmp/output
+	npm="`sed -i 's/^.*succeeded\!/x/g' /tmp/output && cat /tmp/output`"
+done
+
+while true
+do
+	killall -9 matchbox-window-manager
+	killall -9 chromium-browser
+
+	matchbox-window-manager -use_titlebar no -use_cursor no &
+
+	chromium-browser --disable-session-crashed-bubble --enable-gpu --start-fullscreen http://127.0.0.1:$port/#/root
+done

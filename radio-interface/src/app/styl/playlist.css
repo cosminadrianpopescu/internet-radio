@@ -1,0 +1,93 @@
+@import "root.css";
+.list-item.selected {
+  font-weight: bold;
+}
+.list-item {
+  border-bottom: 1px solid #ffa500;
+}
+.list-dir,
+.list-file {
+  display: inline-flex;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+.list-dir+span {
+  font-weight: bold;
+  color: #ffa500;
+}
+.browser-1 {
+  z-index: 80 !important;
+}
+.browser-2 {
+  z-index: 90 !important;
+}
+.browser-3 {
+  z-index: 100 !important;
+}
+.browser-4 {
+  z-index: 110 !important;
+}
+.browser-5 {
+  z-index: 120 !important;
+}
+.list-wrapper {
+  width: 480px;
+  height: 320px;
+  overflow: scroll;
+}
+.list-item {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 13px;
+}
+.list-item-icon {
+  float: left;
+}
+.browserItemOption {
+  width: 48px;
+  height: 46px;
+  display: inherit;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.item-name {
+  max-width: 360px;
+  min-height: 20px;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.addToFavourites {
+  background-image: url("../images/addToFavourites.png");
+}
+.delete {
+  background-image: url("../images/delete.png");
+}
+.enque {
+  background-image: url("../images/enque.png");
+}
+.enable {
+  background-image: url("../images/enable.png");
+}
+.select {
+  background-image: url("../images/select.png");
+}
+.disable {
+  background-image: url("../images/disable.png");
+}
+.browser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 320px;
+  background: #fff;
+  z-index: 79;
+  overflow: hidden;
+  color: #000;
+  font-weight: normal;
+}
+.keyboardBrowser {
+  z-index: 81 !important;
+}

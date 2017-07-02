@@ -1,0 +1,235 @@
+@import "screensaver.css"
+@import "keyboard.css"
+@import "scroll.css"
+@import "controls.css"
+@import "playlist.css"
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.md-button {
+    width: 90%;
+}
+
+body{
+	background-color:#EEE;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+div.centered{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.test {
+    width: 600px;
+    height: 800px;
+}
+
+.buttons{
+    display: block;
+    position: relative;
+}
+
+#content{
+    padding-top: 8px;
+    color: orange;
+    font-weight: bold;
+}
+
+span.button, span.button2, span.button3, .back-home{
+    border: none;
+    display: inline-block;
+    background: none;
+    background-repeat: no-repeat;
+    background-image: url(../images/buttons.png);
+    text-align: center;
+}
+
+.info {
+    height:auto;
+}
+
+.info-wrapper{
+    overflow-y: scroll;
+    font-weight: normal;
+    color: black;
+}
+
+.info-playing-now{
+    font-weight: bold;
+}
+
+.buttons-wrapper {
+    overflow-x: scroll;
+}
+
+.button-container {
+    float: left;
+}
+
+generate_media(width, height, font_size, but1, but2, info_height, padding, background_top, background_diff, background_top2, line_height, background_dif2, body_font_size)
+    @media screen and (min-width: width) and (max-width: width + 80){
+        #content{
+            width: width;
+            height: height;
+        }
+
+        .infoTimer {
+            font-weight: bold;
+            font-size: font_size * 2;
+        }
+
+        .back-home{
+            width: but2;
+            height: but2;
+            background-position: background_dif2 * 8 background_top2;
+            position: fixed;
+            top: padding;
+            left: padding;
+            z-index: 1;
+            opacity: 0.4;
+        }
+
+        .button2 {
+            width: but2;
+            height: but2;
+            background-position: 0px background_top2 !important;
+            font-size: font_size * 3;
+            font-weight: bold;
+            color: white;
+        }
+
+        .button2 div {
+            height: but2;
+            width: but2;
+            line-height: line_height;
+        }
+
+        span.button div{
+            position: relative;
+            top: but1;
+            font-size: font_size;
+        }
+
+        span.button {
+            width: but1;
+            height: but1;
+        }
+
+        .info-wrapper{
+            width: width;
+            height: info_height;
+        }
+
+        .info-playing{
+            height: (info_height / 3);
+            overflow: hidden;
+            font-size: font_size - 3;
+        }
+
+        .options-wrapper {
+            height: but2;
+            width: width;
+            overflow: scroll;
+        }
+
+        div.button {
+            padding-left: padding;
+            padding-right: padding;
+            float: left;
+        }
+
+        .buttons-wrapper{
+            width: width;
+            height: but1 + padding * 2 + 20;
+        }
+
+        .loading-overlay{
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: width;
+        }
+
+        .main-buttons{
+            width: (but1 + padding * 2) * 10 + padding * 2;
+            height: but1 + padding * 2 + 20;
+        }
+
+        #but-favourites {
+            background-position: 0px background_top;
+        }
+
+        #but-control-shuffle {
+            background-position: background_diff background_top;
+        }
+
+        #but-playlist {
+            background-position: background_diff * 2 background_top;
+        }
+
+        #but-open {
+            background-position: background_diff * 3 background_top;
+        }
+
+        #but-stop-all {
+            background-position: background_diff * 4 background_top;
+        }
+
+        #but-alarms {
+            background-position: background_diff * 5 background_top;
+        }
+
+        #but-timer {
+            background-position: background_diff * 6 background_top;
+        }
+
+        #but-history {
+            background-position: background_diff * 7 background_top;
+        }
+
+        #but-close {
+            background-position: background_diff * 8 background_top;
+        }
+
+        #but-backend {
+            background-position: background_diff * 9 background_top;
+        }
+
+        .button.selected{
+            background-position-y: background_top - 400 !important;
+        }
+
+        .infoIconToday {
+            float: left;
+            width: info_height;
+            height: info_height;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: info_height info_height;
+        }
+
+        .iconInfoText {
+            font-size: (info_height / 4);
+        }
+
+        body{
+            font: body_font_size Helvetica, Arial, sans-serif;
+        }
+    }
+
+generate_media(320px, 240px, 13px, 96px, 64px, 40px, 5px, -130px, -100px, -330px, 65px, -70px, 8pt)
+generate_media(480px, 320px, 16px, 128px, 96px, 52px, 8px, 0px, -130px, -230px, 90px, -100px, 11pt)

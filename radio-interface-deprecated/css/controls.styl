@@ -1,0 +1,59 @@
+generate_media(max_width, width, height, background_top, background_diff)
+    @media screen and (min-width: max_width) and (max-width: max_width + 80){
+        .controls {
+            height: height;
+            width: width * 7;
+        }
+
+        .button-container {
+            width: width;
+        }
+
+        .button3 {
+            width: width;
+            height: height;
+        }
+
+        .button3 div {
+            height: width;
+            width: height;
+        }
+
+        #but-seek-back {
+            background-position: background_diff background_top !important;
+        }
+
+        #but-play{
+            background-position: background_diff * 2 background_top !important;
+        }
+
+        #but-pause {
+            background-position: background_diff * 3 background_top !important;
+        }
+
+        #but-stop {
+            background-position: background_diff * 4 background_top !important;
+        }
+
+        #but-seek-forward {
+            background-position: background_diff * 5 background_top !important;
+        }
+
+        #but-loop {
+            background-position-x: background_diff * 6; 
+            background-position-y: background_top;
+        }
+
+        #but-shuffle {
+            background-position-x: background_diff * 7;
+            background-position-y: background_top;
+        }
+
+        .button3.selected{
+            background-position-y: background_top - 400 !important;
+        }
+    }
+
+generate_media(320px, 64px, 64px, -330px, -70px)
+generate_media(480px, 96px, 96px, -230px, -100px)
+

@@ -1,0 +1,17 @@
+{
+  "name": "radio-http",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+  },
+  "private": true,
+  "dependencies": {
+      "q": "^1.5.0",
+      "iconv": "^2.2.3",
+      "mplayer": "^2.1.0",
+      "nodejs-websocket": "^1.7.1",
+      "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+  }
+}

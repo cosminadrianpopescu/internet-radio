@@ -1,0 +1,28 @@
+@import "root.css";
+.list-item {
+  border-bottom: 1px solid #ffa500;
+}
+.list-item.dir {
+  color: #ffa500;
+  font-weight: bold;
+}
+.browser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+.list-wrapper {
+  width: 480px;
+  height: 320px;
+  overflow: scroll;
+}
+.list-items {
+  width: 480px;
+}
+.list-item {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 13px;
+}

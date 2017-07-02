@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>resources/xspf.tpl</file>
+    <file>resources/track.tpl</file>
+</qresource>
+</RCC>
