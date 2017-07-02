@@ -6,9 +6,7 @@ behind it was to have an internet radio totally independent. This means it
 doesn't depend on any server, I can modify the software whenever I want and it
 has a decent music on demand service (`youtube`).
 
-What you will need: 
-
-## Hardware
+## Plug it and play
 
 As a hardware, you need a raspberry pi model 3 (the installation instructions
 for the software reffer to raspberry pi model 3), a touch screen with a box to
@@ -45,6 +43,10 @@ After you have your hardware, just check
 sd card. If you want to build the full software stack from scratch, see
 [this](https://github.com/cosminadrianpopescu/internet-radio/blob/master/tutorial-build.md)
 page.
+
+## Screen shoots
+
+![The radio](screenshots/01.jpg)
 
 ## Software
 
