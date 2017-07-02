@@ -29,6 +29,10 @@ application from 0 and to change the `CSS` and `PNG` files.
   screen and box](https://www.amazon.fr/gp/product/B013W3NK26/ref=oh_aui_detailpage_o05_s00?ie=UTF8&psc=1)
 * [USB
   Charger](https://www.amazon.fr/gp/product/B013FOYNSM/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
+* Some speakers. I recommand [these
+  ones](https://www.amazon.fr/gp/product/B00544XKK4/ref=oh_aui_detailpage_o04_s00?ie=UTF8&psc=1)
+  because they are cheap, they power on the USB (no additional power cable) and
+they sound ok for my needs. Of course, you can use any speaker you want
 * SD Card: any SD card of minimum 4GB will do
 
 *NOTE*: I see that the Tontec touch screen is not available any more. If you buy another
@@ -36,8 +40,10 @@ application from 0 and to change the `CSS` and `PNG` files.
 install it, you'll have to connect to your pi and follow the installation
 instructions for your screen driver.
 
-After you have your hardware, just check [this]() page on how to initialize your
-sd card. If you want to build the full software stack from scratch, see [this]()
+After you have your hardware, just check
+[this](https://github.com/cosminadrianpopescu/internet-radio/blob/master/tutorial-install.md) page on how to initialize your
+sd card. If you want to build the full software stack from scratch, see
+[this](https://github.com/cosminadrianpopescu/internet-radio/blob/master/tutorial-build.md)
 page.
 
 ## Software

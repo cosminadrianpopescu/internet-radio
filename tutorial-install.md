@@ -1,5 +1,4 @@
 1. Burn the image to disk
-=========================================
 
 ```
 cd /tmp
@@ -61,7 +60,6 @@ $ sudo resize2fs /dev/mmcblk0p2
 ```
 
 2. Customize the installation
-========================================
 
 * `sudo mount /dev/mmcblk0p2 /mnt`
 * edit the `/mnt/home/pi/programs/radio-interface-dist/main.bundle.js`
@@ -77,18 +75,17 @@ $ sudo resize2fs /dev/mmcblk0p2
       [here](http://openweathermap.org/appid))
 
 3. Set the network
-========================================
 
 * edit `/mnt/etc/wpa_supplicant/wpa_supplicant.conf` file (see
   [here](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
 
 4. Set the timezone
-========================================
 
 * `sudo cp /usr/share/zoneinfo/<continent>/<country> /etc/localtime` 
 
 *NOTE*: The radio has the possibility to cache the youtube videos using
 [`youtube-dl`](https://github.com/rg3/youtube-dl/). The pre-build system comes
 without `youtube downloader`. If you want this, you can install it in
-`/home/pi/programs` folder (see the [build guide]()). If you install it, then
-you have to be carefull with the space on the sd card.
+`/home/pi/programs` folder (see the [build
+guide](https://github.com/cosminadrianpopescu/internet-radio/blob/master/tutorial-build.md)).
+If you install it, then you have to be carefull with the space on the sd card.
