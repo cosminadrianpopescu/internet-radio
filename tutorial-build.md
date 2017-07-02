@@ -82,3 +82,33 @@ chmod +x youtube-dl
   and change `ExecStart=-/sbin/agetty --noclear %I $TERM` line with 
   `ExecStart=-/sbin/agetty -a pi %I $TERM`
 * `sudo reboot`
+
+Build the interface
+========================================
+
+If you want to modify anything in the interface, or you want to change the
+default settings, you can rebuild the interface:
+
+```
+cd programs
+mv /tmp/radio-interface .
+cd radio-interface
+npm install
+npm start
+```
+
+This will server the applicationn on port 4200 (you need to also edit the
+`programs/start-screen-test` file and change the port). Then you can modify
+anything you like and then you can rebuild.
+
+```
+cd programs/radio-interface
+ng build
+cd
+rm -r programs/radio-interface-dist
+mv programs/radio-interface/dist programs/radio-interface-dist
+sudo reboot
+```
+
+The default settings you can find them in
+`programs/radio-interface/src/app/shared/config.ts`
